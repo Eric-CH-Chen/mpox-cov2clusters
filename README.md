@@ -22,7 +22,8 @@ In support of the manuscript submission.
   - igraph
 
 # General work flow to create simulation
-Step 1:
+### Step 1:
+
 Use run favites_out_gephi_run.nf with a favites_lite.json file as input
 ie. 
 ```
@@ -32,14 +33,16 @@ nextflow run ../github-source/test_scripts/WIP/favites_out_gephi_run.nf -entry c
 	-c config/nextflow_config
 ```
 
-Step 2:
+### Step 2:
+
 Manually load the output edge and node file into Gephi, run the modularity function and save the output.
  - (Optional) Colour the nodes based on modularity
  - (Optional) reorganizese nodes into easier to visualize graphs using 'force atlast' or 'force atlas 2' function
 
 Manually convert meta output from ***Step 1*** into csv format
 
-Step 3:
+### Step 3:
+
 Run param-validate.nf using output files, and idealy the same output folder, to generate outputs.
 Note that the modularity file from ***Step 2*** is the reference that we will be comparing against.
 
@@ -52,5 +55,6 @@ nextflow run ../github-source/test_scripts/WIP/param-validation.nf -entry run_mu
                 --interval_file data/exampleIntervalData.tsv
 ```
 
-Step 4:
+### Step 4:
+
 Visualize the output by excel or R or other programs.
